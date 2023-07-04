@@ -64,7 +64,7 @@
 								<h3>Short Curriculum vitae</h3>
 								<ul>
 									<li>2020: B.Sc. in mathematics at the <a href="https://www.uni-bayreuth.de/en">University of Bayreuth</a> under the supervision of <a href="http://www.mathe2.uni-bayreuth.de/stoll/">Prof. Dr. Michael Stoll</a></li>
-									<li>2022: M.Sc. in mathematics at the <a href="https://uni-freiburg.de/en/" target="_blank" rel="noopener noreferrer">University of Freiburg</a> under the supervision of <a href="https://math.commelin.net/">Dr. Johannes Commelin</a></li>
+									<li>2022: M.Sc. in mathematics at the <a href="https://uni-freiburg.de/en/" onclick="openInNewBackgroundTab(event)">University of Freiburg</a> under the supervision of <a href="https://math.commelin.net/">Dr. Johannes Commelin</a></li>
 							</div>
 						</div>
 					</div>
@@ -215,5 +215,14 @@
 			<script src="assets/js/skel.min.js"></script>
 			<script src="assets/js/util.js"></script>
 			<script src="assets/js/main.js"></script>
+			<script>
+				function openInNewBackgroundTab(event) {
+				event.preventDefault(); // Prevents the default link behavior
+				var url = event.target.href;
+				var newTab = window.open(url, '_blank');
+				newTab.blur(); // Move the focus away from the new tab
+				window.focus(); // Return the focus to the current page
+				}
+			</script>
 	</body>
 </html>
