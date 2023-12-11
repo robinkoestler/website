@@ -1,0 +1,32 @@
+/* styles.css */
+
+/* CSS for hover content */
+.hover-content {
+  display: none;
+  position: absolute;
+  max-width: 200px; /* Maximum width */
+  max-height: 200px; /* Maximum height */
+  background-color: rgba(0, 0, 0, 0.7);
+  color: white;
+  padding: 10px;
+  transition: 0.3s ease;
+  overflow: hidden; /* Hide content that exceeds the maximum size */
+  white-space: normal; /* Allow wrapping within hover content */
+}
+
+/* Show the hover content on hover */
+.hover-trigger:hover + .hover-content {
+  display: block;
+}
+
+/* Style the span inside the hover-trigger */
+.hover-trigger a.flashy-link {
+  color: blue; /* Change link color to blue */
+  text-decoration: underline; /* Underline the link */
+}
+
+/* Style the image to fit inside the hover-content */
+.hover-content .hover-image {
+  width: 100%; /* Set the width to 100% to fit inside the container */
+  height: auto; /* Maintain aspect ratio */
+}
